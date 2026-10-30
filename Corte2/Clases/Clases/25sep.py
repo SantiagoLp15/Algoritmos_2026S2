@@ -7,13 +7,13 @@ acciones = [
 ]
 
 def selection_sort_stocks(arr):
-    n = len(arr)
+    n = len(arr) # Complejidad = O(n)
     comparaciones = 0
     intercambios = 0
 
     for i in range(n):
         min_idx = i
-        for j in range(i+1, n):
+        for j in range(i+1, n): # Complejidad O(n)
             comparaciones +=1
             if arr[j]['precio'] < arr[min_idx]['precio']:
                 min_idx = j
@@ -23,4 +23,4 @@ def selection_sort_stocks(arr):
     print("La cantidad de intercambios fue: ",intercambios)
     return arr
 resultado = selection_sort_stocks(acciones)
-print(resultado)       
+print(resultado) # Complejidad O(n^2)
